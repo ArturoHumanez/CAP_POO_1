@@ -1,4 +1,4 @@
-import { Cat } from "./app/models/catClass";
+import { Cat } from "./app/models/catClass.js";
 
 // name:string, gender:string,age:number, weight:number, color:string)
 
