@@ -1,10 +1,10 @@
-import { Cat } from "./app/models/catClass.js";
+import { Cat } from "./app/models/Cat.js";
 
 // name:string, gender:string,age:number, weight:number, color:string)
 
 
-const gato1 = new Cat("Garfield", "Masculino", 5, 15, "Orange");
-const gato2 = new Cat("Meowth", "Masculino", 5, 15, "Blanco");
+const gato1 = new Cat("Garfield", "Masculino", 5, 15, "Orange", "Marmol");
+const gato2 = new Cat("Meowth", "Masculino", 5, 15, "Crema","Manchado");
 
 
 console.log(gato1.run("Camita"));

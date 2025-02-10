@@ -1,4 +1,4 @@
-export class Cat{
+export class Animal{
 
     name:string;
     gender:string;
@@ -30,7 +30,4 @@ export class Cat{
         return `I sleept ${hours} healthy hours`
     }
 
-    meow():string{
-        return `MEEEEEEEEEEEEEOW`;
-    }
 }
