@@ -21,6 +21,9 @@ export class VentaService <T extends Venta> implements IGestionService<T>{
     consultarCantidad(): number {
         return this.ventas.length;
     }
+    consultarVentaTotal():number{
+        return this.ventas.reduce((sum, venta) => sum + venta.venta_total, 0);
+    }
     eliminarVenta(venta:T): T[]{
         const index = this.ventas.findIndex((item) => item.id === venta.id );
         this.ventas = this.ventas.slice(0, index).concat(this.ventas.slice(index + 1));

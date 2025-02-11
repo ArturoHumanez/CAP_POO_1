@@ -12,6 +12,7 @@ console.log(gato1.run("Camita"));
 console.log(gato2.sleep(20));
 
 //Evaluación
+
 const producto1 = new Producto(1, 100, "Lápices", 20, "BIC", "Lápiz 2B");
 const producto2 = new Producto(2, 600, "Papel", 40, "Dunder Miffling", "Papel Blanco");
 const producto3 = new Producto(3, 4300, "Cuadernos", 20, "Norma", "Cuaderno Estampado");
@@ -28,9 +29,17 @@ inventario = inventarioService.restarProducto(producto3);
 inventario = inventarioService.consultar();
 
 const ventaService = new VentaService();
+
+//Se utiliza el arreglo inventario para simular info de una API
 const venta1 = new Venta(1, [inventario[0], inventario[1]], new Date());
+inventario = inventarioService.restarProducto(inventario[0]);
+inventario = inventarioService.restarProducto(inventario[1]);
+
 
 ventaService.agregar(venta1);
 ventaService.consultar();
+let ventaTotal = ventaService.consultarVentaTotal();
+console.log(`Se logró una venta de $${ventaTotal}`);;
+
 ventaService.eliminarVenta(venta1);
 ventaService.consultar();

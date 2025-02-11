@@ -12,7 +12,7 @@ export class InventarioService <T extends Producto> implements IGestionService<T
       this.productos.push(producto);      
     }
     agregarProductos(productos: T[] ):void{
-        this.productos = [...productos]      
+        this.productos = [...this.productos, ...productos]      
       }
     consultar(): T[] {
       console.log(`Lista de elementos: ${JSON.stringify(this.productos)}`);

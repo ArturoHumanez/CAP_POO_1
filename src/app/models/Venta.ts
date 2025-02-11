@@ -1,7 +1,7 @@
 import { Producto } from "./Producto";
 
 /**
- * Esta clase está encargada de guardar las ventas dentro del sistema.
+ * Esta clase está encargada de gestionar las ventas dentro del sistema.
  */
 export class Venta{
 
